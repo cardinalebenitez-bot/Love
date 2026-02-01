@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Для Яночки 💖</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  text-align: center;
+  padding-top: 60px;
+}
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+#love {
+  display: none;
+  margin-top: 40px;
+}
+img {
+  max-width: 80%;
+}
+</style>
+</head>
+<body>
+
+<h2>Небольшой тест перед сюрпризом 💌</h2>
+<p>Кто самый любимый человек на свете?</p>
+
+<input type="text" id="answer" placeholder="Введи ответ">
+<br><br>
+<button onclick="check()">Ответить</button>
+
+<p id="hint"></p>
+
+<div id="love">
+  <h1>Моя любимая Яночка ❤️</h1>
+  <p>Я тебя очень люблю</p>
+  <img src="love.jpg">
+</div>
+
+<script>
+function check() {
+  const a = document.getElementById("answer").value.toLowerCase();
+  if (a.includes("я") || a.includes("ты") || a.includes("яна")) {
+    document.getElementById("love").style.display = "block";
+    document.getElementById("hint").innerText = "";
+  } else {
+    document.getElementById("hint").innerText = "Хм… подумай ещё 😉";
+  }
+}
+</script>
+
+</body>
+</html>
